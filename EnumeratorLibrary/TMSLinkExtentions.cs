@@ -1,52 +1,56 @@
-﻿namespace EnumeratorLibrary;
+﻿using System;
+using System.Collections.Generic;
 
-public static class TmsLinqExtensions
+namespace EnumeratorLibrary
 {
-    public static IEnumerable<TOut> TmsSelect<TIn, TOut>(this IEnumerable<TIn> source, Func<TIn, TOut> selector)
+    public static class TmsLinqExtensions
     {
-        if (source == null)
+        public static IEnumerable<TOut> TmsSelect<TIn, TOut>(this IEnumerable<TIn> source, Func<TIn, TOut> selector)
         {
-            throw new ArgumentNullException(nameof(source));
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+
+            if (selector == null)
+            {
+                throw new ArgumentNullException(nameof(selector));
+            }
+
+            throw new NotImplementedException();
+            //return new SelectEnumerator();
         }
 
-        if (selector == null)
+        public static IEnumerable<TIn> TmsWhere<TIn>(this IEnumerable<TIn> source, Func<TIn, bool> selector)
         {
-            throw new ArgumentNullException(nameof(selector));
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+
+            if (selector == null)
+            {
+                throw new ArgumentNullException(nameof(selector));
+            }
+
+            throw new NotImplementedException();
+            //return new WhereEnumerator();
         }
 
-        throw new NotImplementedException();
-        //return new SelectEnumerator();
-    }
-
-    public static IEnumerable<TIn> TmsWhere<TIn>(this IEnumerable<TIn> source, Func<TIn, bool> selector)
-    {
-        if (source == null)
+        public static IEnumerable<TIn> TmsAggregate<TIn>(this IEnumerable<TIn> source, Func<TIn, TIn, TIn> selector)
         {
-            throw new ArgumentNullException(nameof(source));
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+
+            if (selector == null)
+            {
+                throw new ArgumentNullException(nameof(selector));
+            }
+
+            throw new NotImplementedException();
+            //return new AggregateEnumerator();
         }
-
-        if (selector == null)
-        {
-            throw new ArgumentNullException(nameof(selector));
-        }
-
-        throw new NotImplementedException();
-        //return new WhereEnumerator();
-    }
-
-    public static IEnumerable<TIn> TmsAggregate<TIn>(this IEnumerable<TIn> source, Func<TIn, TIn, TIn> selector)
-    {
-        if (source == null)
-        {
-            throw new ArgumentNullException(nameof(source));
-        }
-
-        if (selector == null)
-        {
-            throw new ArgumentNullException(nameof(selector));
-        }
-
-        throw new NotImplementedException();
-        //return new AggregateEnumerator();
     }
 }

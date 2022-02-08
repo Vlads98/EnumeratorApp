@@ -1,6 +1,8 @@
-namespace EnumeratorLibrary.Enumerators;
-
-internal class AggregateEnumerator
+namespace EnumeratorLibrary.Enumerators
 {
-    
+
+    internal class AggregateEnumerator
+    {
+
+    }
 }

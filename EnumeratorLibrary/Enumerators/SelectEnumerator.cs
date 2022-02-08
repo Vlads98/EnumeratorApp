@@ -1,6 +1,8 @@
-namespace EnumeratorLibrary.Enumerators;
-
-internal class SelectEnumerator
+namespace EnumeratorLibrary.Enumerators
 {
-    
+
+    internal class SelectEnumerator
+    {
+
+    }
 }

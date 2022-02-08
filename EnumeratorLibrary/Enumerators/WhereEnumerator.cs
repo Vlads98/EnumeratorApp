@@ -1,6 +1,8 @@
-﻿namespace EnumeratorLibrary.Enumerators;
-
-internal class WhereEnumerator
+﻿namespace EnumeratorLibrary.Enumerators
 {
-    
+
+    internal class WhereEnumerator
+    {
+
+    }
 }

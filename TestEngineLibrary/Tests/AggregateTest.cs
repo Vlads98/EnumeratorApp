@@ -1,17 +1,20 @@
+using System;
 using TestEngineLibrary.Common;
 
-namespace TestEngineLibrary.Tests;
-
-public class AggregateTest : TestBase
+namespace TestEngineLibrary.Tests
 {
-    private AggregateTest() : base(nameof(AggregateTest))
-    {
-    }
 
-    public static TestBase Create() => new AggregateTest();
-
-    protected override bool DoWork()
+    public class AggregateTest : TestBase
     {
-        throw new NotImplementedException();
+        private AggregateTest() : base(nameof(AggregateTest))
+        {
+        }
+
+        public static TestBase Create() => new AggregateTest();
+
+        protected override bool DoWork()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
